@@ -1,27 +1,27 @@
 import { render } from '@testing-library/react'
 import React from 'react'
-import Card from './Components/Card';
-import { Layout, Image, Row, Col } from 'antd';
+// import Card from './Components/Card';
+import { Layout, Image, Row, Col, Card } from 'antd';
 import "antd/dist/antd.css";
 const { Header, Footer, Sider, Content } = Layout;
 
-const cards = [
-    {
-        titulo: "Nuevas GeForce RTX Series 3000",
-        contenido: "Nvidia anuncio sus nuevas tarjetas graficas los cuales salen este mes de Septiembre, mostro las novedades que traen y el rendimiento que tendran. En NVIDIA no se han dormido en los laureles, y hoy presentan por fin la esperada evolución de la arquitectura Turing. Se llama Ampere, y llega con mejoras notables en todos los apartados. Para demostrarlo tenemos con nosotros las nuevas NVIDIA GeForce RTX 3070, RTX 3080 y RTX 3090, unas gráficas absolutamente bestiales que más o menos doblan los rendimientos de sus antecesoras con precios más bajos que los de sus predecesoras",
-        imagen_url: "https://static.techspot.com/images2/news/bigimage/2020/08/2020-08-28-image-21.jpg"
-    },
-    {
-        titulo: "Sony y la tan esperada PlayStation 5",
-        contenido: "Sony porfin ha anunciado el precio y la fecha de salida que tendran sus consolas de nueva generacion, los cuales resultan ser bastante competitivo con su rival directo Microsoft y sus nuevas Xbox. Sony pone el punto final a los rumores. En su conferencia online presentó los juegos de la PS5 y otros detalles. La PlayStation 5 por fin salió a la luz pública con su precio de venta y fecha oficial de salida, según en qué parte del mundo te encuentres. Todas las novedades se dieron a conocer en un evento online.",
-        imagen_url: "https://pbs.twimg.com/media/EiELrJKWsAEGRYf?format=jpg&name=4096x4096"
-    },
-    {
-        titulo: "Mercedes Benz muestra su nuevo vehiculo electrico",
-        contenido: "Cuando Mercedes-Benz nos mostró en el CES 2020 su concepto de Vision AVTR inspirado en la película 'Avatar' no esperábamos mucho más de ello. Estábamos equivocados, el fabricante ha hecho realidad este vehículo y nos muestra cómo es conducirlo por la calle con su hipnótico diseño y esas ruedas prácticamente surrealistas. Este coche eléctrico de Mercedes-Benz, si bien no se producirá en masa, tiene una versión funcional con la que se puede circular. Lo cierto es que por mucho que parezcan imágenes hechas por ordenador el vehículo es 100% real, esto hace que sea más increíble aún.",
-        imagen_url: "https://i.blogs.es/e82402/screenshot-4/1366_2000.jpg"
-    }
-]
+// const cards = [
+//     {
+//         titulo: "Nuevas GeForce RTX Series 3000",
+//         contenido: "Nvidia anuncio sus nuevas tarjetas graficas los cuales salen este mes de Septiembre, mostro las novedades que traen y el rendimiento que tendran. En NVIDIA no se han dormido en los laureles, y hoy presentan por fin la esperada evolución de la arquitectura Turing. Se llama Ampere, y llega con mejoras notables en todos los apartados. Para demostrarlo tenemos con nosotros las nuevas NVIDIA GeForce RTX 3070, RTX 3080 y RTX 3090, unas gráficas absolutamente bestiales que más o menos doblan los rendimientos de sus antecesoras con precios más bajos que los de sus predecesoras",
+//         imagen_url: "https://static.techspot.com/images2/news/bigimage/2020/08/2020-08-28-image-21.jpg"
+//     },
+//     {
+//         titulo: "Sony y la tan esperada PlayStation 5",
+//         contenido: "Sony porfin ha anunciado el precio y la fecha de salida que tendran sus consolas de nueva generacion, los cuales resultan ser bastante competitivo con su rival directo Microsoft y sus nuevas Xbox. Sony pone el punto final a los rumores. En su conferencia online presentó los juegos de la PS5 y otros detalles. La PlayStation 5 por fin salió a la luz pública con su precio de venta y fecha oficial de salida, según en qué parte del mundo te encuentres. Todas las novedades se dieron a conocer en un evento online.",
+//         imagen_url: "https://pbs.twimg.com/media/EiELrJKWsAEGRYf?format=jpg&name=4096x4096"
+//     },
+//     {
+//         titulo: "Mercedes Benz muestra su nuevo vehiculo electrico",
+//         contenido: "Cuando Mercedes-Benz nos mostró en el CES 2020 su concepto de Vision AVTR inspirado en la película 'Avatar' no esperábamos mucho más de ello. Estábamos equivocados, el fabricante ha hecho realidad este vehículo y nos muestra cómo es conducirlo por la calle con su hipnótico diseño y esas ruedas prácticamente surrealistas. Este coche eléctrico de Mercedes-Benz, si bien no se producirá en masa, tiene una versión funcional con la que se puede circular. Lo cierto es que por mucho que parezcan imágenes hechas por ordenador el vehículo es 100% real, esto hace que sea más increíble aún.",
+//         imagen_url: "https://i.blogs.es/e82402/screenshot-4/1366_2000.jpg"
+//     }
+// ]
 
 function Blog() {
     return(
@@ -60,7 +60,7 @@ function Blog() {
                 </Sider>
             
             <Content>
-                <div className="site-layout-content">
+                {/* <div className="site-layout-content">
                     { cards.map(card => {
                         return (
                             <Row>
@@ -74,8 +74,8 @@ function Blog() {
                             </Row>
                         )
                     })}
-                </div>
-            {/* <Row>
+                </div> */}
+            <Row>
                 <Col span={20} offset={2}>
                 <h1><strong style={{color: "black", fontSize:20}}>Ultimas Noticias</strong></h1>
                 <Card title="Nuevas GeForce RTX Series 3000" style={{ width: 650 }}>
@@ -101,7 +101,7 @@ function Blog() {
                     />
                 </Card>
                 </Col>
-            </Row> */}
+            </Row>
             </Content>
             </Layout>
             <Footer>
